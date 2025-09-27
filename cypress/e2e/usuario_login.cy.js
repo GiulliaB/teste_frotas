@@ -35,4 +35,10 @@ describe('Usuário login e listar', () => {
     cy.location('pathname').should('eq', '/usuarios');
     cy.getByData('tableUsuarios').find('tbody').first().contains('Administração Frotas Teste');
   });
+  it('Deve cadastrar um usuários com sucesso, confirmando resposta de rede retornada na operação', () => {
+    // Implementação use o cy.intercetp()
+  });
+  it('Deve atualizar um usuários com sucesso, confirmando resposta de rede retornada na operação', () => {
+    // Implementação use o cy.intercetp()
+  });
 });
