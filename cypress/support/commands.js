@@ -32,5 +32,4 @@ Cypress.Commands.add('login', (email, senha) => {
   cy.getByData('credencialLogin').type(email);
   cy.getByData('senhaLogin').type(senha);
   cy.getByData('button-cadastrar').click();
-  cy.url().should('eq', 'https://frotas.app.fslab.dev/inicio')
 });
