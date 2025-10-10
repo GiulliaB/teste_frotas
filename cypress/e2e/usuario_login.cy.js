@@ -34,7 +34,7 @@ describe("Login do usuário", () => {
   });
 
   // Listagem de usuários com verificação de paginação e consistência com a API
-  it("Listagem de usuários com paginação, consistência com a API e aplicação de filtros", () => {
+  it("Deve listar usuários com sucesso, confirmando paginação e dados comparando com a API, aplicando os filtros da consulta", () => {
     
     cy.login("admin", "ABCDabcd1234");
 
@@ -140,7 +140,7 @@ describe("Login do usuário", () => {
     cy.location("pathname").should("include", "/usuarios");
   });
 
-  it("Deve cadastrar um usuários com sucesso", () => {
+  it("Deve cadastrar um usuários com sucesso, confirmando resposta de rede retornada na operação", () => {
     cy.login("admin", "ABCDabcd1234");
     cy.getByData("botao-page-usuarios").click();
     cy.location("pathname").should("eq", "/usuarios");
@@ -215,7 +215,7 @@ describe("Login do usuário", () => {
     })
   });
 
-  it("Deve atualizar um usuários com sucesso", () => {
+  it("Deve atualizar um usuários com sucesso, confirmando resposta de rede retornada na operação", () => {
     cy.login("admin", "ABCDabcd1234");
     cy.getByData("botao-page-usuarios").click();
     cy.location("pathname").should("eq", "/usuarios");
